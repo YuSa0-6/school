@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <article class="wrap">
+            <section class="member-form">
+                <input
+                type="name"
+                name="name"
+                class="input-name"
+                placeholder="please enter name"
+                :value="name"
+                @input="inputName"
+                />
+                <button
+                class="add-button"
+                @click="addMember"
+                >登録</button>
+                </section>
+                <section class="list-area">
+                    <div class="area-incomplete">
+                        <p class="member-title">incomplete items</p>
+                        <ul class="member-area">
+                            <li
+                            v-for="(item, i) in members"
+                            :key="i"
+                            class="list"
+                            >
+                        <span class="list-label">{{item.name}}</span>
+                        </li>
+                        </ul>
+                    </div>
+                </section>
+        </article>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+</html>

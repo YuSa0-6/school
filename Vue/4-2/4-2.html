@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/4-1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button
+        class="button"
+        @click="increment"
+        >+1</button>
+        <button
+        class="button"
+        @click="decrement"
+        >-1</button>
+        <p>{{ count }}</p>
+        <p
+            v-if="isPass"
+            class="passed"
+            >合格！
+        </p>
+        <p
+            v-else
+        >不合格</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+    <script src="./script/4-2.js"></script>
+</body>
+</html>

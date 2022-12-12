@@ -1,0 +1,10 @@
+.character {
+    font-size: 16px;
+    color: black;
+}
+
+.is-changed {
+    font-size: 36px;
+    color: violet;
+    background-color: pink;
+}

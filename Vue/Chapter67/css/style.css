@@ -1,0 +1,8 @@
+#app ul {
+    list-style: none;
+}
+
+.doneStyle {
+    text-decoration: line-through;
+    color: lightgray;
+}

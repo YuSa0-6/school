@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="form-area__studentNum">
+            <p>学籍番号</p>
+            <input
+            type="number"
+            name="number"
+            v-model="number"
+            />
+            <p
+            v-if="isInValidNum"
+            class="error"
+            >学籍番号は数字7桁で入力してください</p>
+        </div>
+        <div class="form-area__name">
+            <p>名前</p>
+            <input
+            type="text"
+            name="name"
+            v-model="name"
+            />
+            <p
+            v-if="isInValidName"
+            class="error"
+            >名前は4文字以上で入力してください</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>
