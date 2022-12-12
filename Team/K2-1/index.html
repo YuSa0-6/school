@@ -2,47 +2,64 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>sample</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <title>Document</title>
 </head>
 
 <body>
-  <div id="id">
+  <div id="app">
+
     <!-- header -->
-    <div class="header"></div>
+    <header></header>
 
 
-    <!-- mainContent -->
-    <div class="main">
-      <!-- 上部の条件表示 -->
-      <div class="displayTerms">
-        <div class="displayArea">
-          <icon class="icon">dddd</icon>
-          <label>tokyo</label>
-        </div>
-        <div class="displayArea Area">
-          <icon class="icon">dddd</icon>
-          <label class="Date">tokyo</label>
-          <icon class="icon">dddd</icon>
-          <label class="peopleNum">tokyo</label>
-        </div>
-        <div class="displayArea displayTerms">
-          <icon class="icon">dddd</icon>
-          <label class="terms">tokyo</label>
-        </div>
+    <!-- conditionds -->
+    <div class="conditionds">
 
+      <div class="location">
+        <icon>icon</icon><label>{{ location }}</label>
       </div>
-      <!-- トグルリスト -->
-      <div class="toggleList"></div>
-      <!-- リスト表示 -->
+      <div class="date">
+        <icon>icon</icon><label>{{ date }}</label>
+        <icon>icon</icon><label>{{ roomCnt }}{{ peopleNum }}</label>
+      </div>
+
+      <div class="condition">
+        <icon>icon</icon><label>{{ condition }}</label>
+      </div>
+
     </div>
+
+
+    <!-- selectBox -->
+    <div class="selectBox">
+      <select v-model="selected">
+        <option v-for="option in options" v-bind:value="option.value">
+          <h6>並び順：{{ option.text }}</h6>
+        </option>
+      </select>
+    </div>
+
+
+    <!-- hotelList -->
+    <div class="hotelList">
+      <ul>
+        <li v-for="hotel in hotels" :key="hotel.name">
+          <div @click="LinkRoom(hotels.id)" class="hotelCard" style="background-image: url(' + hotel.src + ');">
+            <p>{{ hotel.name }}</p>
+            <p><icon>aa</icon>{{ hotel.plan }}</p>
+            <p>{{ hotel.location }}</p>
+            <p>{{ hotel.charge }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
   </div>
 
-  <!-- ナビゲーション -->
   <nav class="nav">
     <ul class="ulNav">
       <li class="liNav">
@@ -67,6 +84,8 @@
       </li>
     </ul>
   </nav>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./script/script.js"></script>
 </body>
 
 </html>

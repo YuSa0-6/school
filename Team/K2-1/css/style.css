@@ -3,13 +3,67 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.header {
-  background-color: rgba(34, 58, 112, 1);
-  padding:6% 0;
-  margin-top: 5vh;
+header {
+  height: 36px;
   width: 100%;
+  background-color: rgba(34, 58, 112, 1);
+  margin-top:8%;
 }
+
+/* conditions */
+.conditionds {
+  padding: 3% 5%;
+}
+.conditionds label {
+  height: 2.5em;
+  margin-bottom:2%;
+  background-color: rgb(247,236,236);
+  display: inline-block;
+}
+.location label, .condition label {
+  width: 81%;
+}
+.date label {
+  width: 37%;
+}
+
+/*  selectBox */
+.selectBox {
+  margin-bottom: 10%;
+}
+.selectBox select {
+  position:absolute;
+  right: 0px;
+  background-color: rgba(34, 58, 112, 1);
+  color: #fff;
+}
+
+
+.hotelList {
+  width: 100%;
+  height: 20%;
+}
+.hotelList ul {
+  margin-bottom:5%;
+  list-style: none;
+  text-align: center;
+}
+.hotelList ul p:nth-child(4) {
+  text-align: right ;
+}
+.hotelList li {
+  margin-bottom: 5%;
+  background-color: rgb(247, 236, 236);
+  padding: 2% 3%;
+}
+.hotelList img {
+  width: auto;
+  height: 100px;
+}
+.hotelList p {
+  margin-bottom: 1%;
+}
+
 
 /*共通部分navigationの部分*/
 
