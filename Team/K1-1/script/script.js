@@ -33,6 +33,9 @@ new Vue({
     changeModal() {
       this.modalDefault = !this.modalDefault;
       this.modalChanged = !this.modalChanged;
+    },
+    linkRoom() {
+      location.href = '../K2-1/index.html';
     }
   }
 });
