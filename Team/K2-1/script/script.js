@@ -14,10 +14,10 @@ const app = new Vue({
                 { text: '安い順', value: 'C' }
             ],
             hotels: [
-                { id:00, name: '旅館', plan: 'プラン', location: '場所', charge: '料金', src: "./photo/hotel/hotel_7.jpg" },
+                { id:00, name: '旅館', plan: 'プラン', location: '場所', charge: '料金', src: "./photo/hotel/hotel_10.jpg" },
                 { id:01, name: '旅館', plan: 'プラン', location: '場所', charge: '料金', src: "./photo/hotel/hotel_7.jpg" },
                 { id:02, name: '旅館', plan: 'プラン', location: '場所', charge: '料金', src: "./photo/hotel/hotel_7.jpg" }
-            ]
+            ],
         }
     },
     methods: {

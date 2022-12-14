@@ -20,15 +20,15 @@
     <div class="conditionds">
 
       <div class="location">
-        <icon>icon</icon><label>{{ location }}</label>
+        <icon class="iconLocation"></icon><label>{{ location }}</label>
       </div>
       <div class="date">
-        <icon>icon</icon><label>{{ date }}</label>
-        <icon>icon</icon><label>{{ roomCnt }}{{ peopleNum }}</label>
+        <icon class="iconDate"></icon><label>{{ date }}</label>
+        <icon class="iconRoomCnt iconPeopleNum"></icon><label>{{ roomCnt }}部屋{{ peopleNum }}人</label>
       </div>
 
       <div class="condition">
-        <icon>icon</icon><label>{{ condition }}</label>
+        <icon class="iconCondition"></icon><label>{{ condition }}</label>
       </div>
 
     </div>
@@ -43,20 +43,18 @@
       </select>
     </div>
 
-
     <!-- hotelList -->
-    <div class="hotelList">
-      <ul>
+      <ul class="list">
         <li v-for="hotel in hotels" :key="hotel.name">
-          <div @click="LinkRoom(hotels.id)" class="hotelCard" style="background-image: url(' + hotel.src + ');">
+          <div @click="LinkRoom(hotels.id)" class="hotelCard" :style="{ 
+            backgroundImage: 'linear-gradient(270deg, rgb(247, 236, 236) 60%, rgba(0,0,0,0) 60%),url(' + hotel.src + ')'}">
             <p>{{ hotel.name }}</p>
             <p><icon>aa</icon>{{ hotel.plan }}</p>
-            <p>{{ hotel.location }}</p>
+            <p><icon class="iconLocation"></icon>{{ hotel.location }}</p>
             <p>{{ hotel.charge }}</p>
           </div>
         </li>
       </ul>
-    </div>
 
   </div>
 
